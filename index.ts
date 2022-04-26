@@ -14,5 +14,25 @@ bot.telegram.getMe().then((botInfo) => {
 
 
 bot.start((ctx) => ctx.reply('Welcome'))
+bot.command('numMembers', async (ctx) => {
+    const numMembers = await ctx.getChatMembersCount()
+    console.log(`numMembers: ${numMembers}`)
+    await ctx.reply(numMembers.toString())
+})
+bot.command('admin', async (ctx) => {
+    const arrAdmin = await ctx.getChatAdministrators()
+    const str = arrAdmin.map((m) => m.user.id).join(',')
+    await ctx.reply(str)
+})
+bot.command('isExist', async (ctx) => {
+    const text = ctx.update?.message?.text || ''
+    const [,memberId,] = text.split(' ')
+    try{
+        const member = await ctx.getChatMember(parseInt(memberId))
+        await ctx.reply('Yes')
+    }catch (e) {
+        await ctx.reply('No')
+    }
+})
 bot.launch()
 
