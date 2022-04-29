@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon index.ts",
+    "start2": "npx nodemon index2.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/gunrosen/telegram-bot#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
+    "node-telegram-bot-api": "^0.57.0",
     "nodemon": "^2.0.15",
     "telegraf": "^3.38.0",
     "ts-node": "^10.7.0",
