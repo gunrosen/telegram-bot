@@ -9,3 +9,10 @@ Simple telegram bot
 + bots can be added only as admins, not members.*
 
 Go to channel, click to channel name then add bot as admins 
+
+# Twitter bot
+Twitter API endpoint has a rate limit of 900 requests/15-minutes
+
+View rate limit at [Twitter API](https://developer.twitter.com/en/docs/twitter-api/rate-limits)
+
+max_results is from 1 to 100
