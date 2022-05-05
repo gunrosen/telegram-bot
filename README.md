@@ -16,3 +16,16 @@ Twitter API endpoint has a rate limit of 900 requests/15-minutes
 View rate limit at [Twitter API](https://developer.twitter.com/en/docs/twitter-api/rate-limits)
 
 max_results is from 1 to 100
+
+How to generate a Bearer Token
+
+|   API key 	|     e.g.xvz1evFS4wEEPTGEFPHBog	|
+|---	|---	| 
+|   API secret key	|   e.g.xvz1evFS4wEEPTGEFPHBog	|
+
+
+``
+curl -u "$API_KEY:$API_SECRET_KEY" \
+--data 'grant_type=client_credentials' \
+'https://api.twitter.com/oauth2/token'
+``
