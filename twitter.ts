@@ -15,17 +15,17 @@ const MAX_RESULTS = 100
 
 class CheckTwitter {
 
-    async checkLikeTweet(pagination_token?: string){
+    async checkLikeTweet(paginationToken?: string){
         try {
             const params: any = {
                 max_results: MAX_RESULTS
             }
-            if (pagination_token) params['pagination_token'] = pagination_token
+            if (paginationToken) params['pagination_token'] = paginationToken
             const result = await axios.get(`https://api.twitter.com/2/tweets/${TWITTER_SAMPLE_TWEET_ID}/liking_users`,
                 {
                     params:  params,
                     headers:{
-                        'Authorization': `Bearer ${process.env.TWITTER_BEAT_TOKEN}`,
+                        'Authorization': `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
                         'Accept-Encoding':'gzip, deflate, br'
                     }
                 },
@@ -39,17 +39,17 @@ class CheckTwitter {
 
     }
 
-    async checkFollowTwitter(pagination_token?: string){
+    async checkFollowTwitter(paginationToken?: string){
         try {
             const params: any = {
                 max_results: MAX_RESULTS
             }
-            if (pagination_token) params['pagination_token'] = pagination_token
+            if (paginationToken) params['pagination_token'] = paginationToken
             const result = await axios.get(`https://api.twitter.com/2/users/${TWITTER_ACCOUNT_EPIC}/followers`,
                 {
                     params:  params,
                     headers:{
-                        'Authorization': `Bearer ${process.env.TWITTER_BEAT_TOKEN}`,
+                        'Authorization': `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
                         'Accept-Encoding':'gzip, deflate, br'
                     }
                 },
@@ -62,17 +62,17 @@ class CheckTwitter {
         }
     }
 
-    async checkRetweetATweet(pagination_token?: string){
+    async checkRetweetATweet(paginationToken?: string){
         try {
             const params: any = {
                 max_results: MAX_RESULTS
             }
-            if (pagination_token) params['pagination_token'] = pagination_token
+            if (paginationToken) params['pagination_token'] = paginationToken
             const result = await axios.get(`https://api.twitter.com/2/tweets/${TWITTER_SAMPLE_TWEET2_ID}/retweeted_by`,
                 {
                     params:  params,
                     headers:{
-                        'Authorization': `Bearer ${process.env.TWITTER_BEAT_TOKEN}`,
+                        'Authorization': `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
                         'Accept-Encoding':'gzip, deflate, br'
                     }
                 },
