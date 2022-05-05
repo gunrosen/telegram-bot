@@ -72,10 +72,10 @@ const func = async () => {
      channel: {"user":{"id":956604381,"is_bot":false,"first_name":"Khoa","last_name":"Nguyen","username":"khoanguyenminh"},"status":"member"}
 
      */
-    // checkService.bot!.on('message', (msg: any) => {
-    //     const chatId = msg?.chat?.id;
-    //     console.log(`${msg?.from.first_name} ${msg?.from.last_name} group/channel:${msg?.chat?.title} chatId:${chatId} text:${msg?.text}`)
-    // });
+    checkService.getBot().on('message', (msg: any) => {
+        const chatId = msg?.chat?.id;
+        console.log(`${msg?.from.first_name} ${msg?.from.last_name} group/channel:${msg?.chat?.title} chatId:${chatId} text:${msg?.text}`)
+    });
 }
 
 
