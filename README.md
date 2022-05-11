@@ -29,3 +29,17 @@ curl -u "$API_KEY:$API_SECRET_KEY" \
 --data 'grant_type=client_credentials' \
 'https://api.twitter.com/oauth2/token'
 ``
+
+# Discord bot
+Add Bot to server
+
+`
+https://discordapp.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot&permissions=<>
+`
+
+Get guild members see [link](https://discord.com/developers/docs/resources/guild#get-guild-member)
+
+Check rate limit at [link](https://discord.com/developers/docs/resources/guild#get-guild-member)
+
+
+
