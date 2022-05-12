@@ -7,6 +7,7 @@
     "start": "npx nodemon index.ts",
     "telegram": "npx nodemon telegram.ts",
     "twitter": "npx nodemon twitter.ts",
+    "discord": "npx nodemon discord.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
