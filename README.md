@@ -10,6 +10,11 @@ Simple telegram bot
 
 Go to channel, click to channel name then add bot as admins 
 
+Get updates
+``
+https://api.telegram.org/bot<token>/getUpdates
+``
+
 # Twitter bot
 Twitter API endpoint has a rate limit of 900 requests/15-minutes
 
@@ -29,6 +34,7 @@ curl -u "$API_KEY:$API_SECRET_KEY" \
 --data 'grant_type=client_credentials' \
 'https://api.twitter.com/oauth2/token'
 ``
+
 
 # Discord bot
 Add Bot to server
