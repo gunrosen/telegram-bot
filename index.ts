@@ -57,6 +57,7 @@ bot.command('exist', async (ctx) => {
         await ctx.reply('No')
     }
 })
+bot.on
 // bot.startPolling(5000, 100,)
 bot.launch()
 
