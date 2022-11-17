@@ -46,6 +46,10 @@ const runCrawlTelegram = async () => {
     if (channel instanceof Channel){
       console.log(`CreatedDate: ${utcEpochToDateString(channel.date)}`);
     }
+    // Get inactive channels/groupd
+    // https://gram.js.org/tl/channels/GetInactiveChannels
+    // 15 days not active
+
 
 
   }
