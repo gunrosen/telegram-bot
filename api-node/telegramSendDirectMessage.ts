@@ -32,22 +32,44 @@ const stringSession = new StringSession(session);
   if (me instanceof User){
     console.log(`username: ${me.username}`)
   }
-  const result = await client.invoke(
-    new Api.updates.GetChannelDifference({
-      channel: "https://t.me/GameFiVN",
-      filter: new Api.ChannelMessagesFilter({
-        ranges: [
-          new Api.MessageRange({
-            minId: 10,
-            maxId: 100,
-          }),
-        ],
-      }),
-      pts: 46049,
-      limit: 100,
-      force: true,
-    })
-  );
+  // Get Exactly reaction from message Id
+  // const result = await client.invoke(
+  //   new Api.messages.GetMessagesReactions({
+  //     peer: "https://t.me/GameFiVN",
+  //     id: [102717],
+  //   })
+  // );
+
+  // Get History
+  // const result = await client.invoke(
+  //   new Api.messages.GetHistory({
+  //     peer: "https://t.me/GameFi_OfficialANN",
+  //     offsetId: 102717,
+  //     addOffset: 0,
+  //     limit: 100,
+  //     maxId: 0,
+  //     minId: 0,
+  //   })
+  // );
+
+  const result = await client.invoke(new Api.channels.GetInactiveChannels());
+
+  // const result = await client.invoke(
+  //   new Api.updates.GetChannelDifference({
+  //     channel: "https://t.me/GameFiVN",
+  //     filter: new Api.ChannelMessagesFilter({
+  //       ranges: [
+  //         new Api.MessageRange({
+  //           minId: 10,
+  //           maxId: 100,
+  //         }),
+  //       ],
+  //     }),
+  //     pts: 137142,
+  //     limit: 100,
+  //     force: true,
+  //   })
+  // );
   // const result = await client.invoke(new Api.updates.GetState());
   console.log(JSON.stringify(result)) // prints the result
 
