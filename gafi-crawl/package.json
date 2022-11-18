@@ -1,0 +1,26 @@
+{
+  "name": "gafi-crawl",
+  "version": "1.0.0",
+  "description": "gamefi crawl telegram group/channel info",
+  "main": "src/index.ts",
+  "scripts": {
+    "telegram-channel": "npx nodemon src/telegram-channel.ts"
+  },
+  "keywords": [
+    "crawl",
+    "telegram"
+  ],
+  "author": "hungp",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "input": "^1.0.1",
+    "nodemon": "^2.0.15",
+    "telegram": "^2.11.5",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.26"
+  }
+}
