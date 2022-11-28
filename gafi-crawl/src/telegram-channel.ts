@@ -28,7 +28,7 @@ const stringSession = new StringSession(session);
 const runCrawlTelegram = async () => {
   const filePath = "crawl.txt"
   if (fs.existsSync(filePath)) {
-    fs.rm(filePath)
+    await fsPromises.rm(filePath)
   }
   const client = new TelegramClient(stringSession, apiId, apiHash, {
     connectionRetries: 5,
