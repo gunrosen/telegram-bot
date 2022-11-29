@@ -4,7 +4,8 @@
   "description": "gamefi crawl telegram group/channel info",
   "main": "src/index.ts",
   "scripts": {
-    "telegram-channel": "npx nodemon src/telegram-channel.ts"
+    "telegram-channel": "npx nodemon src/telegram-channel.ts",
+    "telegram-group": "npx nodemon src/telegram-group.ts"
   },
   "keywords": [
     "crawl",
